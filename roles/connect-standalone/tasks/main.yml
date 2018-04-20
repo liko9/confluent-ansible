@@ -22,16 +22,16 @@
     owner: "{{kafka.connect.user}}"
     group: "{{kafka.connect.group}}"
   with_items: "{{kafka.connect.standalone.plugin_path}}"
-- name: connect standalone create systemd unit
-  template:
-    src: connect-standalone.service.j2
-    dest: "{{kafka.connect.standalone.systemd_file}}"
-    mode: 0640
-    owner: "{{kafka.connect.user}}"
-    group: "{{kafka.connect.group}}"
-  notify:
-    - reload systemd
-    - restart connect standalone
+#- name: connect standalone create systemd unit
+#  template:
+#    src: connect-standalone.service.j2
+#    dest: "{{kafka.connect.standalone.systemd_file}}"
+#    mode: 0640
+#    owner: "{{kafka.connect.user}}"
+#    group: "{{kafka.connect.group}}"
+#  notify:
+#    - reload systemd
+#    - restart connect standalone
 - name: connect standalone create config
   template:
     src: connect-standalone.properties.j2

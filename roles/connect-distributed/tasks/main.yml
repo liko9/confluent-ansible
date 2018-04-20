@@ -5,16 +5,16 @@
     mode: 0750
     owner: "{{kafka.connect.user}}"
     group: "{{kafka.connect.group}}"
-- name: connect distributed create systemd unit
-  template:
-    src: connect-distributed.service.j2
-    dest: "{{kafka.connect.distributed.systemd_file}}"
-    mode: 0600
-    owner: root
-    group: root
-  notify:
-    - reload systemd
-    - restart connect distributed
+#- name: connect distributed create systemd unit
+#  template:
+#    src: connect-distributed.service.j2
+#    dest: "{{kafka.connect.distributed.systemd_file}}"
+#    mode: 0600
+#    owner: root
+#    group: root
+#  notify:
+#    - reload systemd
+#    - restart connect distributed
 - name: connect distributed plugin path
   file:
     path: "{{ item }}"

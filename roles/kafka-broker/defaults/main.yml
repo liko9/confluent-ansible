@@ -1,10 +1,10 @@
 kafka:
   broker:
     user: cp-kafka
-    group: cp-kafka
+    group: confluent
     config_file: /etc/kafka/server.properties
     logging_config_file: /etc/kafka/server.logging.properties
-    systemd_file: /usr/lib/systemd/system/confluent-kafka.service
+    #    systemd_file: /usr/lib/systemd/system/confluent-kafka.service
     service_name: confluent-kafka
     datadir:
       - /var/lib/kafka

@@ -31,16 +31,16 @@
     group: "{{kafka.broker.group}}"
   notify:
     - restart kafka
-- name: broker create systemd unit
-  template:
-    src: broker.service.j2
-    dest: "{{kafka.broker.systemd_file}}"
-    mode: 0600
-    owner: root
-    group: root
-  notify:
-    - reload systemd
-    - restart kafka
+#- name: broker create systemd unit
+#  template:
+#    src: broker.service.j2
+#    dest: "{{kafka.broker.systemd_file}}"
+#    mode: 0600
+#    owner: root
+#    group: root
+#  notify:
+#    - reload systemd
+#    - restart kafka
 - name: broker configure service
   systemd:
     name: "{{kafka.broker.service_name}}"

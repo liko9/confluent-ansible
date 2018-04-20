@@ -1,10 +1,10 @@
 schema:
   registry:
     user: cp-kafka-rest
-    group: cp-kafka-rest
+    group: confluent
     config_file: /etc/kafka/kafka-rest.properties
     logging_config_file: /etc/kafka/kafka-rest.logging.properties
-    systemd_file: /usr/lib/systemd/system/confluent-kafka-rest.service
+    #    systemd_file: /usr/lib/systemd/system/confluent-kafka-rest.service
     service_name: confluent-kafka-rest
     config:
       listeners: http://0.0.0.0:8081

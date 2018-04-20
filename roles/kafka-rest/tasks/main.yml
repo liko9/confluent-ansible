@@ -14,16 +14,16 @@
     mode: 0750
     owner: "{{kafka.rest.user}}"
     group: "{{kafka.rest.group}}"
-- name: kafka-rest create systemd unit
-  template:
-    src: kafka-rest.service.j2
-    dest: "{{kafka.rest.systemd_file}}"
-    mode: 0600
-    owner: root
-    group: root
-  notify:
-    - reload systemd
-    - restart kafka-rest
+#- name: kafka-rest create systemd unit
+#  template:
+#    src: kafka-rest.service.j2
+#    dest: "{{kafka.rest.systemd_file}}"
+#    mode: 0600
+#    owner: root
+#    group: root
+#  notify:
+#    - reload systemd
+#    - restart kafka-rest
 - name: kafka-rest create config
   template:
     src: kafka-rest.properties.j2

@@ -56,6 +56,7 @@ ansible-playbook --check -i hosts.yml all.yaml
 ansible-playbook -i hosts.yml all.yaml
 ```
 
+### Notes regarding systemd service names and userids from RPM install
 ```yaml
 # service, user
 #confluent-schema-registry, cp-schema-registry

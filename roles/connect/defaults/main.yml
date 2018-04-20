@@ -1,4 +1,4 @@
 kafka:
   connect:
-    user: cp-kafka
-    group: cp-kafka
+    user: cp-kafka-connect
+    group: confluent

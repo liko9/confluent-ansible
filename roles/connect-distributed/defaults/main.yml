@@ -3,8 +3,8 @@ kafka:
     distributed:
       config_file: /etc/kafka/connect-distributed.properties
       logging_config_file: /etc/kafka/connect-distributed.logging.properties
-      systemd_file: /usr/lib/systemd/system/confluent-connect-distributed.service
-      service_name: confluent-connect-distributed
+      #      systemd_file: /usr/lib/systemd/system/confluent-connect-distributed.service
+      service_name: confluent-kafka-connect
       plugin_path:
         - /usr/share/java
       config:

@@ -1,9 +1,9 @@
 zookeeper:
   user: cp-kafka
-  group: cp-kafka
+  group: confluent
   config_file: /etc/kafka/zookeeper.properties
   logging_config_file: /etc/kafka/zookeeper.logging.properties
-  systemd_file: /usr/lib/systemd/system/confluent-zookeeper.service
+  #  systemd_file: /usr/lib/systemd/system/confluent-zookeeper.service
   service_name: confluent-zookeeper
   config:
     maxClientCnxns: 0

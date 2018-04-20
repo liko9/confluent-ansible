@@ -30,16 +30,16 @@
     group: "{{zookeeper.group}}"
   notify:
     - restart zookeeper
-- name: zookeeper create systemd unit
-  template:
-    src: zookeeper.service.j2
-    dest: "{{zookeeper.systemd_file}}"
-    mode: 0600
-    owner: root
-    group: root
-  notify:
-    - reload systemd
-    - restart zookeeper
+#- name: zookeeper create systemd unit
+#  template:
+#    src: zookeeper.service.j2
+#    dest: "{{zookeeper.systemd_file}}"
+#    mode: 0600
+#    owner: root
+#    group: root
+#  notify:
+#    - reload systemd
+#    - restart zookeeper
 - name: zookeeper create config
   template:
     src: zookeeper.properties.j2
